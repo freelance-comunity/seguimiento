@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'yellow',
+    'skin' => 'blue',
 
     /*
     |--------------------------------------------------------------------------
@@ -126,6 +126,12 @@ return [
             'url'         => 'admin/pages',
             'icon'        => 'check-circle',
             // 'label'       => 4,
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Posts',
+            'url'         => 'admin/posts',
+            'icon'        => 'pencil-square-o',
             'label_color' => 'success',
         ],
         'CUENTA',

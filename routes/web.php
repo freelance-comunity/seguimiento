@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('admin/posts', 'Admin\\PostsController');
+});
