@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'Seguimiento | UM',
+    'title' => 'Encuestas | UM',
 
     'title_prefix' => '',
 
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '<b>Seguimiento</b>UM',
+    'logo' => '<b>Encuestas</b>UM',
 
     'logo_mini' => '<b>U</b>M',
 
@@ -134,7 +134,7 @@ return [
             'icon'        => 'pencil-square-o',
             'label_color' => 'success',
         ],
-        'CUENTA',
+        'CONFIGURACIÓN',
         [
             'text' => 'Perfil',
             'url'  => 'admin/settings',
@@ -145,44 +145,74 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'lock',
         ],
-        // [
-        //     'text'    => 'Multilevel',
-        //     'icon'    => 'share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'Level One',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'Level One',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'Level Two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'Level Two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'Level Three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'Level Three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'Level One',
-        //             'url'  => '#',
-        //         ],
-        //     ],
-        // ],
+        [
+            'text'    => 'Sistema',
+            'icon'    => 'desktop',
+            'submenu' => [
+                [
+                    'text' => 'Planteles',
+                    'url'  => 'system/campus',
+                ],
+                [
+                    'text' => 'Carreras',
+                    'url'  => 'system/career',
+                ],
+                [
+                    'text' => 'Asignaturas',
+                    'url'  => 'system/subject',
+                ],
+                [
+                    'text'    => 'Altas',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Docentes',
+                            'url'  => 'system/teacher',
+                        ],
+                        [
+                            'text' => 'Alumnos',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+                [
+                    'text'    => 'Utilerías',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Ciclos',
+                            'url'  => 'system/props/cycle',
+                        ],
+                        [
+                            'text' => 'Estados de registros',
+                            'url'  => 'system/props/status',
+                        ],
+                        [
+                            'text' => 'Grupos',
+                            'url'  => 'system/props/group',
+                        ],
+                        [
+                            'text' => 'Tipos de usuario',
+                            'url'  => 'system/props/usertype',
+                        ],
+                        // [
+                        //     'text'    => 'Level Two',
+                        //     'url'     => '#',
+                        //     'submenu' => [
+                        //         [
+                        //             'text' => 'Level Three',
+                        //             'url'  => '#',
+                        //         ],
+                        //         [
+                        //             'text' => 'Level Three',
+                        //             'url'  => '#',
+                        //         ],
+                        //     ],
+                        // ],
+                    ],
+                ],
+            ],
+        ],
         'ETIQUETAS',
         [
             'text'       => 'Important',

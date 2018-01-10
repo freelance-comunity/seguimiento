@@ -26,3 +26,27 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('admin/posts', 'Admin\\PostsController');
 });
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('system/campus', 'System\\CampusController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('system/career', 'System\\CareerController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('system/subject', 'System\\SubjectController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('system/props/status', 'System\\StatusController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('system/props/cycle', 'System\\CycleController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('system/props/group', 'System\\GroupController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('system/props/usertype', 'System\\UsertypeController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('system/teacher', 'System\\TeacherController');
+});
