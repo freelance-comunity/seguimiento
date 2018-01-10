@@ -20,7 +20,7 @@ class Teacher extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'last_name', 'username', 'password'];
+    protected $fillable = ['name', 'last_name', 'email', 'username', 'password', 'campus_id', 'status_id', 'user_id'];
 
     use SoftDeletes;
     protected $dates = ['deleted_at'];

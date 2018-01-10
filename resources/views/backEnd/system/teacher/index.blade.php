@@ -28,7 +28,7 @@
             <td>{{ $item->email }}</td>
             <td>{{ $item->username }}</td>
             <td>
-              <a href="{{ url('system/teacher/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Update</a> {!! Form::open([ 'method'=>'DELETE', 'url' => ['system/teacher', $item->id], 'style' => 'display:inline' ]) !!} {!! Form::submit('Delete',
+              <a href="{{ url('system/teacher/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a> {!! Form::open([ 'method'=>'DELETE', 'url' => ['system/teacher', $item->id], 'style' => 'display:inline' ]) !!} {!! Form::submit('Eliminar',
               ['class' => 'btn btn-danger btn-xs']) !!} {!! Form::close() !!}
             </td>
           </tr>

@@ -11,6 +11,8 @@ use Carbon\Carbon;
 use Session;
 use App\Campus;
 use App\Status;
+use App\User;
+use Hash;
 
 class TeacherController extends Controller
 {
@@ -48,14 +50,34 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required', 'last_name' => 'required', 'username' => 'required', 'password' => 'required', ]);
+        try {
+          $this->validate($request, ['name' => 'required', 'last_name' => 'required', 'username' => 'required', 'password' => 'required', ]);
 
-        Teacher::create($request->all());
+          // *********************
+          // Create user
+          // *********************
+          $user = new User();
+          $user->name = $request->input('name');
+          $user->email = $request->input('email');
+          $user->password = Hash::make($request->input('password'));
+          $user->save();
 
-        Session::flash('message', 'Teacher added!');
-        Session::flash('status', 'success');
+          $input = $request->all();
+          $input['user_id'] = $user->id;
 
-        return redirect('system/teacher');
+          Teacher::create($input);
+
+          Session::flash('message', 'Teacher added!');
+          Session::flash('status', 'success');
+
+          return redirect('system/teacher');
+        } catch (\Exception $e) {
+          Session::flash('error', 'Teacher added!');
+          Session::flash('status', 'success');
+
+          return redirect('system/teacher');
+        }
+
     }
 
     /**
