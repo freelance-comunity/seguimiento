@@ -11,14 +11,14 @@
     <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
       {!! Form::label('name', 'Nombre(s): ', ['class' => 'col-sm-3 control-label']) !!}
       <div class="col-sm-6">
-        {!! Form::text('name', null, ['class' => 'form-control input-lg', 'required' => 'required']) !!} {!! $errors->first('name', '
+        {!! Form::text('name', null, ['class' => 'form-control input-lg', 'required' => 'required', 'onkeyup' => 'this.value=this.value.toUpperCase();']) !!} {!! $errors->first('name', '
         <p class="help-block">:message</p>') !!}
       </div>
     </div>
     <div class="form-group {{ $errors->has('last_name') ? 'has-error' : ''}}">
       {!! Form::label('last_name', 'Apellidos: ', ['class' => 'col-sm-3 control-label']) !!}
       <div class="col-sm-6">
-        {!! Form::text('last_name', null, ['class' => 'form-control input-lg', 'required' => 'required']) !!} {!! $errors->first('last_name', '
+        {!! Form::text('last_name', null, ['class' => 'form-control input-lg', 'required' => 'required', 'onkeyup' => 'this.value=this.value.toUpperCase();']) !!} {!! $errors->first('last_name', '
         <p class="help-block">:message</p>') !!}
       </div>
     </div>
@@ -32,7 +32,7 @@
     <div class="form-group {{ $errors->has('username') ? 'has-error' : ''}}">
       {!! Form::label('username', 'Nombre de Usuario: ', ['class' => 'col-sm-3 control-label']) !!}
       <div class="col-sm-6">
-        {!! Form::text('username', null, ['class' => 'form-control input-lg', 'required' => 'required']) !!} {!! $errors->first('username', '
+        {!! Form::text('username', null, ['class' => 'form-control input-lg', 'required' => 'required', 'onkeyup' => 'this.value=this.value.toUpperCase();']) !!} {!! $errors->first('username', '
         <p class="help-block">:message</p>') !!}
       </div>
     </div>
