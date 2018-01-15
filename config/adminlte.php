@@ -122,18 +122,18 @@ return [
             'label_color' => 'success',
         ],
         [
-            'text'        => 'Seguimiento',
-            'url'         => 'admin/pages',
-            'icon'        => 'check-circle',
+            'text'        => 'Encuestas',
+            'url'         => 'admin/poll',
+            'icon'        => 'pencil-square-o',
             // 'label'       => 4,
             'label_color' => 'success',
         ],
-        [
-            'text'        => 'Posts',
-            'url'         => 'admin/posts',
-            'icon'        => 'pencil-square-o',
-            'label_color' => 'success',
-        ],
+        // [
+        //     'text'        => 'Posts',
+        //     'url'         => 'admin/posts',
+        //     'icon'        => 'pencil-square-o',
+        //     'label_color' => 'success',
+        // ],
         'CONFIGURACIÓN',
         [
             'text' => 'Perfil',

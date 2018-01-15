@@ -56,6 +56,6 @@
 @endif
 
 @yield('adminlte_js')
-
+@include('errors.notification')
 </body>
 </html>

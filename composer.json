@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "bpocallaghan/notify": "^2.1",
         "fideloper/proxy": "~3.3",
         "jeroennoten/laravel-adminlte": "^1.22",
         "laravel/framework": "5.5.*",

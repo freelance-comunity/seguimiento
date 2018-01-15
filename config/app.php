@@ -182,6 +182,8 @@ return [
         Roland\Crud\CrudServiceProvider::class,
         // LaravelCollective
         Collective\Html\HtmlServiceProvider::class,
+        // notify
+        Bpocallaghan\Notify\NotifyServiceProvider::class,
 
 
     ],
@@ -235,6 +237,8 @@ return [
         // LaravelCollective
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
+
+        'Notify' => Bpocallaghan\Notify\Facades\Notify::class,
 
     ],
 
